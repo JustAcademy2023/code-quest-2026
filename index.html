@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syntax Lab 2026 | Top Programming Languages to Learn for IT Jobs</title>
+<meta name="description" content="Explore the top programming languages to learn for IT jobs in 2026 inside an interactive code lab. Try Python, JavaScript, Java, C, SQL and R, then follow a clear roadmap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070f;--panel:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);--tx:#e9e8ff;--mut:#a3a1c9;--a:#7c5cff;--b:#00e0ff;--c:#ff4fd8;--g:#37f2a1;--grad:linear-gradient(120deg,var(--b),var(--a) 50%,var(--c))}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Sora,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+.mono{font-family:"JetBrains Mono",monospace}
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.aurora i{position:absolute;width:55vmax;height:55vmax;border-radius:50%;filter:blur(90px);opacity:.38;animation:float 18s ease-in-out infinite alternate}
+.aurora i:nth-child(1){background:var(--a);top:-20vmax;left:-15vmax}
+.aurora i:nth-child(2){background:var(--b);bottom:-25vmax;right:-15vmax;animation-delay:-6s}
+.aurora i:nth-child(3){background:var(--c);top:35%;left:45%;width:35vmax;height:35vmax;opacity:.22;animation-delay:-11s}
+@keyframes float{to{transform:translate(6vmax,4vmax) scale(1.15)}}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(7,7,15,.6);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{text-decoration:none;font-weight:800;font-family:"JetBrains Mono",monospace;font-size:1rem}
+.logo b{color:var(--g)}
+nav{display:flex;gap:4px}
+nav a{text-decoration:none;color:var(--mut);font-size:.9rem;padding:6px 12px;border-radius:8px}
+nav a:hover{color:#fff;background:var(--panel)}
+.btn{display:inline-block;text-decoration:none;font-weight:600;color:#fff;background:var(--grad);padding:12px 24px;border-radius:12px;box-shadow:0 0 28px rgba(124,92,255,.5);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 44px rgba(0,224,255,.55)}
+.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{background:var(--panel)}
+.btn.sm{padding:8px 16px;font-size:.88rem}
+.hero{padding:96px 0 70px;text-align:center}
+.chip{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--panel);padding:6px 16px;border-radius:99px;font-size:.82rem;color:var(--mut)}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g)}
+h1{font-size:clamp(2.5rem,7vw,5.2rem);line-height:1.05;font-weight:800;letter-spacing:-2px;margin:24px auto 18px;max-width:900px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;margin:0 auto 30px;color:var(--mut);font-size:1.12rem}
+.typed{display:inline-block;overflow:hidden;white-space:nowrap;border-right:2px solid var(--g);animation:type 3.5s steps(34) 1 both,caret .8s step-end infinite;max-width:100%;vertical-align:bottom}
+@keyframes type{from{width:0}to{width:34ch}}
+@keyframes caret{50%{border-color:transparent}}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.cmd{margin:34px auto 0;max-width:520px;text-align:left;background:rgba(0,0,0,.45);border:1px solid var(--line);border-radius:12px;padding:12px 18px;font-size:.9rem;color:var(--g)}
+section{padding:70px 0}
+.eyebrow{font-family:"JetBrains Mono",monospace;color:var(--b);font-size:.82rem;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,4.2vw,2.9rem);line-height:1.12;letter-spacing:-1px;margin:8px 0 12px}
+.lead{color:var(--mut);max-width:620px;margin-bottom:32px}
+.glass{background:var(--panel);border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(10px)}
+.ide{overflow:hidden}
+.tabs{display:flex;gap:2px;overflow-x:auto;background:rgba(0,0,0,.35);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.tabs button{font:inherit;font-family:"JetBrains Mono",monospace;font-size:.85rem;color:var(--mut);background:none;border:0;padding:10px 18px;cursor:pointer;border-radius:10px 10px 0 0;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:#fff;background:var(--panel);box-shadow:inset 0 2px 0 var(--b)}
+.pane{display:grid;grid-template-columns:1.1fr 1fr;gap:0}
+.code{padding:24px;font-family:"JetBrains Mono",monospace;font-size:.88rem;white-space:pre-wrap;color:#cfe;background:rgba(0,0,0,.3);min-height:230px}
+.info{padding:26px}
+.info h3{font-size:1.5rem;margin-bottom:6px}
+.info p{color:var(--mut);margin-bottom:14px}
+.row{display:flex;justify-content:space-between;font-size:.8rem;color:var(--mut);margin-top:12px}
+.track{height:8px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:4px}
+.track span{display:block;height:100%;border-radius:99px;background:var(--grad);transition:width .6s}
+.tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.75rem;border:1px solid var(--line);padding:3px 12px;border-radius:99px;color:var(--b)}
+.note{font-size:.78rem;color:var(--mut);margin-top:12px}
+.timeline{position:relative;margin-left:14px;padding-left:34px;border-left:2px solid var(--line)}
+.tl{position:relative;margin-bottom:26px;padding:20px 22px}
+.tl::before{content:"";position:absolute;left:-44px;top:26px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--b);box-shadow:0 0 14px var(--b)}
+.tl small{font-family:"JetBrains Mono",monospace;color:var(--g)}
+.tl h3{margin:2px 0 4px}
+.tl p{color:var(--mut)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
+.pcard{padding:26px;position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
+.pcard::after{content:"";position:absolute;inset:-1px;border-radius:20px;background:var(--grad);opacity:0;z-index:-1;transition:opacity .3s}
+.pcard:hover{transform:translateY(-8px);border-color:transparent}
+.pcard:hover::after{opacity:.25}
+.badge{width:50px;height:50px;border-radius:14px;background:var(--grad);display:grid;place-items:center;font-family:"JetBrains Mono",monospace;font-weight:700;margin-bottom:14px;color:#07070f}
+.pcard h3{font-size:1.2rem;margin-bottom:6px}
+.pcard p{color:var(--mut);font-size:.93rem;margin-bottom:18px}
+.list a{display:flex;gap:18px;align-items:center;text-decoration:none;padding:20px 24px;margin-bottom:14px;transition:transform .2s,border-color .2s}
+.list a:hover{transform:translateX(8px);border-color:var(--b)}
+.list .n{font-family:"JetBrains Mono",monospace;font-size:1.6rem;font-weight:700;min-width:48px}
+.list h3{font-size:1.05rem}
+.list p{color:var(--mut);font-size:.88rem}
+.list .go{margin-left:auto;font-size:1.5rem;color:var(--b)}
+.banner{padding:54px 28px;text-align:center;background:linear-gradient(135deg,rgba(124,92,255,.35),rgba(0,224,255,.2));border:1px solid var(--line);border-radius:28px}
+.banner p{color:var(--mut);max-width:540px;margin:0 auto 24px}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:46px 0 26px;background:rgba(0,0,0,.4)}
+.fgrid{display:grid;gap:28px;grid-template-columns:2fr 1fr 1fr}
+footer h4{margin-bottom:10px;font-size:.9rem;color:var(--b);font-family:"JetBrains Mono",monospace}
+footer p{color:var(--mut);font-size:.9rem}
+footer a{display:block;text-decoration:none;color:var(--mut);margin:6px 0;font-size:.92rem}
+footer a:hover{color:var(--g)}
+.copy{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:.8rem}
+.rev{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rev.in{opacity:1;transform:none}
+@media(max-width:820px){nav{display:none}.pane{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.hero{padding-top:60px}.timeline{padding-left:26px}.tl::before{left:-36px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}.typed{width:auto;border:0}}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#top"><b>~/</b>syntax-lab<b>.2026</b></a>
+    <nav aria-label="Main">
+      <a href="#lab">Code Lab</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#programmes">Pune Programmes</a>
+      <a href="#reads">Reading</a>
+    </nav>
+    <a class="btn sm" href="https://www.justacademy.co/register-for-course-demo" target="_blank" rel="noopener">Free Demo</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <span class="chip mono">v2026.0 : the language guide</span>
+  <h1>Which language will <span class="grad">launch your IT career?</span></h1>
+  <p>A hands on look at the top programming languages to learn for IT jobs in 2026. Run a snippet, feel the personality of each language, then follow a roadmap that actually fits real life.</p>
+  <div class="cta">
+    <a class="btn" href="#lab">Enter the code lab</a>
+    <a class="btn ghost" href="https://www.justacademy.co/blog-detail/top-programming-languages-to-learn-for-it-jobs-in-2026" target="_blank" rel="noopener">Read the full guide</a>
+  </div>
+  <div class="cmd mono" aria-hidden="true">$ <span class="typed">choose_language --goal=get_hired</span></div>
+</div>
+
+<section id="lab"><div class="wrap rev">
+  <div class="eyebrow">01 / the code lab</div>
+  <h2>Try before you commit</h2>
+  <p class="lead">Pick a tab, read the snippet and see where each language shines. The bars are our editorial opinion on how gentle each one feels at the start, not survey data.</p>
+  <div class="glass ide">
+    <div class="tabs" role="tablist" aria-label="Languages" id="tabs"></div>
+    <div class="pane">
+      <pre class="code" id="code" aria-live="polite"></pre>
+      <div class="info">
+        <h3 id="lname"></h3>
+        <p id="ldesc"></p>
+        <div class="row"><span>Gentle start</span><span id="lval"></span></div>
+        <div class="track"><span id="lbar"></span></div>
+        <div class="tags" id="ltags"></div>
+        <p class="note">Hiring outcomes vary by company, city and effort.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="roadmap"><div class="wrap rev">
+  <div class="eyebrow">02 / the roadmap</div>
+  <h2>Ninety days, three missions</h2>
+  <p class="lead">No giant syllabus. Just three stages that turn curiosity into something you can show an employer.</p>
+  <div class="timeline">
+    <div class="tl glass"><small>DAYS 1 TO 30</small><h3>Build the base</h3><p>Pick one language, practise daily and write tiny programs. Cover variables, conditions, loops, functions and basic data structures.</p></div>
+    <div class="tl glass"><small>DAYS 31 TO 60</small><h3>Ship real projects</h3><p>Build a to do app, a budget tracker or a small API. Break things, fix them and learn how to get unstuck on your own.</p></div>
+    <div class="tl glass"><small>DAYS 61 TO 90</small><h3>Polish and prepare</h3><p>Write clear READMEs, deploy one project with a live link and practise explaining your work in mock interviews.</p></div>
+  </div>
+</div></section>
+
+<section id="programmes"><div class="wrap rev">
+  <div class="eyebrow">03 / guided paths in Pune</div>
+  <h2>Prefer a mentor beside you?</h2>
+  <p class="lead">Live, instructor led programmes for learners who want structure, feedback and real projects.</p>
+  <div class="grid">
+    <article class="pcard glass"><div class="badge">Py</div><h3>Python Training in Pune</h3><p>From first script to automation and data projects, taught live.</p><a class="btn sm" href="https://www.justacademy.co/course-detail/pune/python-training-in-pune" target="_blank" rel="noopener">View course</a></article>
+    <article class="pcard glass"><div class="badge">JS</div><h3>JavaScript Training in Pune</h3><p>Go deep on the language itself, including async code and closures.</p><a class="btn sm" href="https://www.justacademy.co/course-detail/pune/javascript-training-in-pune" target="_blank" rel="noopener">View course</a></article>
+    <article class="pcard glass"><div class="badge">MERN</div><h3>MERN Stack Bootcamp</h3><p>Build startup style full stack products with guided project work.</p><a class="btn sm" href="https://www.justacademy.co/job-bootcamp-detail/pune/mern-stack-developer-course-in-pune-startup-product-development-training" target="_blank" rel="noopener">View bootcamp</a></article>
+    <article class="pcard glass"><div class="badge">Data</div><h3>Data Analytics Bootcamp</h3><p>SQL, Python and dashboards practised on real business problems.</p><a class="btn sm" href="https://www.justacademy.co/job-bootcamp-detail/pune/data-analytics-course-in-pune-online-interactive-training-with-real-world-projects" target="_blank" rel="noopener">View bootcamp</a></article>
+  </div>
+</div></section>
+
+<section id="reads"><div class="wrap rev">
+  <div class="eyebrow">04 / keep reading</div>
+  <h2>Your next four reads</h2>
+  <p class="lead">Short, practical articles to keep your momentum going.</p>
+  <div class="list">
+    <a class="glass" href="https://www.justacademy.co/blog-detail/top-programming-languages-to-learn-for-it-jobs-in-2026" target="_blank" rel="noopener"><span class="n grad">01</span><div><h3>Top Programming Languages to Learn for IT Jobs in 2026</h3><p>The complete guide behind this page.</p></div><span class="go">&rarr;</span></a>
+    <a class="glass" href="https://www.justacademy.co/blog-detail/how-real-projects-help-freshers-get-it-jobs" target="_blank" rel="noopener"><span class="n grad">02</span><div><h3>How Real Projects Help Freshers Get IT Jobs</h3><p>Why a small portfolio beats a stack of certificates.</p></div><span class="go">&rarr;</span></a>
+    <a class="glass" href="https://www.justacademy.co/blog-detail/top-it-skills-to-learn-in-2026-for-high-paying-jobs" target="_blank" rel="noopener"><span class="n grad">03</span><div><h3>Top IT Skills to Learn in 2026 for High Paying Jobs</h3><p>The skills that sit beside your language.</p></div><span class="go">&rarr;</span></a>
+    <a class="glass" href="https://www.justacademy.co/blog-detail/top-10-it-skills-to-learn-in-2026-for-better-career-opportunities" target="_blank" rel="noopener"><span class="n grad">04</span><div><h3>Top 10 IT Skills for Better Career Opportunities</h3><p>A wider look at what employers want.</p></div><span class="go">&rarr;</span></a>
+  </div>
+</div></section>
+
+<section><div class="wrap rev">
+  <div class="banner">
+    <h2>Curious how a live class feels?</h2>
+    <p>Join a free demo, ask your questions and see if the teaching style fits you.</p>
+    <div class="cta">
+      <a class="btn" href="https://www.justacademy.co/register-for-course-demo" target="_blank" rel="noopener">Book a free demo</a>
+      <a class="btn ghost" href="https://www.justacademy.co/download-general-brochure" target="_blank" rel="noopener">Download brochure</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h4>~/syntax-lab.2026</h4><p>An interactive guide to the top programming languages to learn for IT jobs in 2026. Built with plain HTML, CSS and a little JavaScript.</p></div>
+      <div><h4>explore</h4><a href="#lab">Code lab</a><a href="#roadmap">Roadmap</a><a href="#programmes">Pune programmes</a><a href="#reads">Reading list</a></div>
+      <div><h4>links</h4><a href="https://www.justacademy.co/" target="_blank" rel="noopener">JustAcademy</a><a href="https://www.justacademy.co/register-for-course-demo" target="_blank" rel="noopener">Free demo</a><a href="https://www.justacademy.co/download-general-brochure" target="_blank" rel="noopener">Brochure</a></div>
+    </div>
+    <div class="copy">&copy; 2026 Syntax Lab. For educational purposes. Salary and hiring outcomes vary.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+var L=[
+{n:"Python",v:90,d:"Reads like plain English and powers backends, automation, data work and AI. The friendliest first language for most people.",t:["Data","AI","Backend","Automation"],c:'# Python\nscores = [72, 88, 95]\nbest = max(scores)\nprint(f"Top score: {best}")'},
+{n:"JavaScript",v:75,d:"The language of every browser. With Node JS it stretches across the whole web stack, which suits full stack roles.",t:["Web","Full stack","Node JS"],c:'// JavaScript\nconst btn = document.querySelector("button");\nbtn.onclick = () => alert("Hired!");'},
+{n:"Java",v:55,d:"Strict, structured and trusted by banks, telecoms and large enterprises for software that has to last for years.",t:["Enterprise","Backend","Android"],c:'// Java\npublic class Main {\n  public static void main(String[] a) {\n    System.out.println("Hello, 2026");\n  }\n}'},
+{n:"C and C++",v:30,d:"Teaches what the machine is really doing. Steep at first, and a superb foundation for systems, embedded work and games.",t:["Systems","Embedded","Games"],c:'/* C */\n#include <stdio.h>\nint main(void) {\n  printf("Hello, 2026\\n");\n  return 0;\n}'},
+{n:"SQL",v:85,d:"The quiet skill nearly every tech role expects. Ask databases good questions and get useful answers quickly.",t:["Data","Every role","Analytics"],c:'-- SQL\nSELECT city, COUNT(*) AS jobs\nFROM openings\nGROUP BY city\nORDER BY jobs DESC;'},
+{n:"R",v:60,d:"Built by statisticians for exploring data and telling stories with charts. A lovely second language for analysts.",t:["Statistics","Research","Charts"],c:'# R\nmarks <- c(62, 75, 91)\nmean(marks)\nsummary(marks)'}
+];
+var tabs=document.getElementById("tabs"),code=document.getElementById("code"),nm=document.getElementById("lname"),ds=document.getElementById("ldesc"),vl=document.getElementById("lval"),br=document.getElementById("lbar"),tg=document.getElementById("ltags");
+function show(i){
+  var x=L[i];
+  [].forEach.call(tabs.children,function(b,j){b.setAttribute("aria-selected",j===i?"true":"false")});
+  code.textContent=x.c;nm.textContent=x.n;ds.textContent=x.d;vl.textContent=x.v+"%";br.style.width=x.v+"%";
+  tg.innerHTML="";x.t.forEach(function(t){var s=document.createElement("span");s.textContent=t;tg.appendChild(s)});
+}
+L.forEach(function(x,i){
+  var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=x.n;
+  b.addEventListener("click",function(){show(i)});tabs.appendChild(b);
+});
+show(0);
+var io=new IntersectionObserver(function(e){e.forEach(function(y){if(y.isIntersecting){y.target.classList.add("in");io.unobserve(y.target)}})},{threshold:.12});
+document.querySelectorAll(".rev").forEach(function(r){io.observe(r)});
+})();
+</script>
+</body>
+</html>
